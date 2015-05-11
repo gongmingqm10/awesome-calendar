@@ -1,9 +1,12 @@
 package net.gongmingqm10.calendar.activity;
 
+import android.content.pm.PackageManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -12,6 +15,7 @@ import net.gongmingqm10.calendar.R;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnItemClick;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -29,8 +33,18 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void setUpListView() {
-        String[] items = new String[]{"Horizontal Calendar View", "Vertical Calendar View", "Google Calendar", "Select One Date", "Select Depart and Return Date", "Calendar Selection Dialog"};
+        Integer[] items = new Integer[]{R.string.title_activity_horizontal_calendar, 
+                R.string.title_activity_vertical_calendar, 
+                R.string.title_activity_select_date, 
+                R.string.title_activity_depart_return, 
+                R.string.title_activity_google_calendar};
         listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items));
+    }
+    
+    @OnItemClick(R.id.calendar_list)
+    protected void openActivity(AdapterView adapterView, View view, int position) {
+        PackageManager.
+        
     }
 
 

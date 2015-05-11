@@ -16,6 +16,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.HorizontalCalendarActivity"
+            android:label="@string/title_activity_horizontal_calendar"
+            android:parentActivityName=".activity.MainActivity" >
+        </activity>
+        <activity
+            android:name=".activity.VerticalCalendarActivity"
+            android:label="@string/title_activity_vertical_calendar"
+            android:parentActivityName=".activity.MainActivity" >
+        </activity>
+        <activity
+            android:name=".activity.SelectDateActivity"
+            android:label="@string/title_activity_select_date"
+            android:parentActivityName=".activity.MainActivity" >
+        </activity>
+        <activity
+            android:name=".activity.DepartReturnActivity"
+            android:label="@string/title_activity_depart_return"
+            android:parentActivityName=".activity.MainActivity" >
+        </activity>
+        <activity
+            android:name=".activity.GoogleCalendarActivity"
+            android:label="@string/title_activity_google_calendar" >
+        </activity>
     </application>
 
 </manifest>
