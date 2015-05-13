@@ -30,7 +30,6 @@ public class MainActivity extends ActionBarActivity {
     private void setUpListView() {
         String[] items = new String []{getString(R.string.title_activity_horizontal_calendar),
                 getString(R.string.title_activity_vertical_calendar),
-                getString(R.string.title_activity_select_date),
                 getString(R.string.title_activity_depart_return),
                 getString(R.string.title_activity_google_calendar)};
         listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items));
@@ -47,12 +46,9 @@ public class MainActivity extends ActionBarActivity {
                 clazz = VerticalCalendarActivity.class;
                 break;
             case 2:
-                clazz = SelectDateActivity.class;
-                break;
-            case 3:
                 clazz = DepartReturnActivity.class;
                 break;
-            case 4:
+            case 3:
                 clazz = GoogleCalendarActivity.class;
                 break;
             default:

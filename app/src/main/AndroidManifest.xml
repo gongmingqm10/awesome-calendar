@@ -25,10 +25,6 @@
             android:label="@string/title_activity_vertical_calendar"
             android:parentActivityName=".activity.MainActivity" />
         <activity
-            android:name=".activity.SelectDateActivity"
-            android:label="@string/title_activity_select_date"
-            android:parentActivityName=".activity.MainActivity" />
-        <activity
             android:name=".activity.DepartReturnActivity"
             android:label="@string/title_activity_depart_return"
             android:parentActivityName=".activity.MainActivity" />
