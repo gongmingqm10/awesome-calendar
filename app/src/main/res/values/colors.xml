@@ -12,7 +12,8 @@
     <!--900 = black-->
     <color name="indigo_medium">#3F51B5</color>
     <color name="indigo_black">#1A237E</color>
-    
+
+    <color name="grey_extra_light">#EEEEEE</color>
     <color name="grey_light">#E0E0E0</color>
     <color name="grey_normal">#BDBDBD</color>
     <color name="grey_black">#212121</color>

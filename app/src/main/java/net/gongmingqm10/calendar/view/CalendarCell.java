@@ -55,11 +55,11 @@ public class CalendarCell extends TextView {
             updateCell(R.mipmap.calendar_selector_same_day, Typeface.BOLD, true);
         } else if (DateUtil.localDateEquals(calendarDate, departDate)) {
             int resId = returnDate == null ?
-                    R.mipmap.calendar_selector_blue : R.mipmap.calendar_selector_blue_grey;
+                    R.mipmap.calendar_selector_green : R.mipmap.calendar_selector_green_grey;
             updateCell(resId, Typeface.BOLD, true);
         } else if (DateUtil.localDateEquals(calendarDate, returnDate)) {
             int resId = departDate == null ?
-                    R.mipmap.calendar_selector_green : R.mipmap.calendar_selector_green_grey;
+                    R.mipmap.calendar_selector_blue : R.mipmap.calendar_selector_blue_grey;
             updateCell(resId, Typeface.BOLD, true);
         } else if (departDate != null &&
                 returnDate != null &&
