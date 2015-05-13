@@ -33,7 +33,7 @@ public class CalendarCell extends TextView {
         setMeasuredDimension(getMeasuredWidth(), getMeasuredWidth());
     }
 
-    public void populate(Calendar calendar, LocalDate departDate, LocalDate returnDate) {
+    public void populate(Calendar calendar, LocalDate startDate, LocalDate endDate) {
         LocalDate today = DateUtil.getTodaysDate();
         LocalDate calendarDate = DateUtil.getConvertedLocalDate(calendar);
 
@@ -44,27 +44,27 @@ public class CalendarCell extends TextView {
         setEnabled(!(calendarDate.isBefore(today) || calendarDate.isAfter(DateUtil.getMaxShowDate())));
         setActivated(today.equals(calendarDate));
 
-        updateSelection(departDate, returnDate);
+        updateSelection(startDate, endDate);
     }
     
-    public void updateSelection(LocalDate departDate, LocalDate returnDate) {
+    public void updateSelection(LocalDate startDate, LocalDate endDate) {
         
         LocalDate calendarDate = (LocalDate) getTag();
 
-        if (DateUtil.localDateEquals(calendarDate, departDate) && DateUtil.localDateEquals(calendarDate, returnDate)) {
+        if (DateUtil.localDateEquals(calendarDate, startDate) && DateUtil.localDateEquals(calendarDate, endDate)) {
             updateCell(R.mipmap.calendar_selector_same_day, Typeface.BOLD, true);
-        } else if (DateUtil.localDateEquals(calendarDate, departDate)) {
-            int resId = returnDate == null ?
+        } else if (DateUtil.localDateEquals(calendarDate, startDate)) {
+            int resId = endDate == null ?
                     R.mipmap.calendar_selector_green : R.mipmap.calendar_selector_green_grey;
             updateCell(resId, Typeface.BOLD, true);
-        } else if (DateUtil.localDateEquals(calendarDate, returnDate)) {
-            int resId = departDate == null ?
+        } else if (DateUtil.localDateEquals(calendarDate, endDate)) {
+            int resId = startDate == null ?
                     R.mipmap.calendar_selector_blue : R.mipmap.calendar_selector_blue_grey;
             updateCell(resId, Typeface.BOLD, true);
-        } else if (departDate != null &&
-                returnDate != null &&
-                calendarDate.isAfter(new LocalDate(departDate)) &&
-                calendarDate.isBefore(new LocalDate(returnDate))) {
+        } else if (startDate != null &&
+                endDate != null &&
+                calendarDate.isAfter(new LocalDate(startDate)) &&
+                calendarDate.isBefore(new LocalDate(endDate))) {
             updateCell(R.drawable.calendar_item_gray, Typeface.NORMAL, false);
         } else {
             updateCell(0, DateUtil.getTodaysDate().equals(calendarDate) ? Typeface.BOLD : Typeface.NORMAL, false);

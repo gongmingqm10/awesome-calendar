@@ -46,7 +46,7 @@ public class MainActivity extends ActionBarActivity {
                 clazz = VerticalCalendarActivity.class;
                 break;
             case 2:
-                clazz = DepartReturnActivity.class;
+                clazz = StartEndDateActivity.class;
                 break;
             case 3:
                 clazz = GoogleCalendarActivity.class;

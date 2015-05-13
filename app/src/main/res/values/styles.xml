@@ -20,7 +20,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">@dimen/widget_padding_small</item>
         <item name="android:textSize">@dimen/text_size_medium</item>
-        <item name="android:textColor">@color/indigo_black</item>
+        <item name="android:textColor">@color/grey_black</item>
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>
     </style>

@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/white"
-    tools:context="net.gongmingqm10.calendar.activity.DepartReturnActivity">
+    tools:context="net.gongmingqm10.calendar.activity.StartEndDateActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

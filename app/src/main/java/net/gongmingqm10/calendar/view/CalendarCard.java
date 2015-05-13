@@ -74,16 +74,16 @@ public class CalendarCard extends RelativeLayout {
         }
     }
 
-    public void populate(Calendar dateDisplay, LocalDate departDate, LocalDate returnDate) {
+    public void populate(Calendar dateDisplay, LocalDate startDate, LocalDate endDate) {
         cardTitle.setText(new SimpleDateFormat("MMM yyyy", Locale.ENGLISH).format(dateDisplay.getTime()));
-        updateCells(dateDisplay, departDate, returnDate);
+        updateCells(dateDisplay, startDate, endDate);
     }
 
     private int getDaySpacing(int dayOfWeek) {
         return Calendar.SUNDAY == dayOfWeek ? 0 : dayOfWeek - 1;
     }
 
-    private void updateCells(Calendar dateDisplay, LocalDate departDate, LocalDate returnDate) {
+    private void updateCells(Calendar dateDisplay, LocalDate startDate, LocalDate endDate) {
         Integer counter = 0;
         Calendar calendar = (Calendar) dateDisplay.clone();
         calendar.set(Calendar.DAY_OF_MONTH, 1);
@@ -101,7 +101,7 @@ public class CalendarCard extends RelativeLayout {
         for (int i = firstDayOfMonth; i < lastDayOfMonth; i++) {
             calendar.set(Calendar.DAY_OF_MONTH, i);
             CalendarCell cell = cells.get(counter++);
-            cell.populate(calendar, departDate, returnDate);
+            cell.populate(calendar, startDate, endDate);
         }
 
         calendar = (Calendar) dateDisplay.clone();
