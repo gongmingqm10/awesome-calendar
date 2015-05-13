@@ -1,0 +1,46 @@
+<net.gongmingqm10.calendar.view.CalendarCard
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/widget_padding_small">
+    
+    <TextView
+        android:id="@+id/card_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="bold"
+        android:textColor="@color/grey_black"/>
+
+    <LinearLayout
+        android:id="@+id/card_days"
+        android:layout_below="@id/card_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/widget_margin_small"
+        android:paddingBottom="@dimen/widget_margin_small"
+        android:orientation="horizontal">
+        <TextView style="@style/CalendarCard.Day"/>
+        <TextView style="@style/CalendarCard.Day"/>
+        <TextView style="@style/CalendarCard.Day"/>
+        <TextView style="@style/CalendarCard.Day"/>
+        <TextView style="@style/CalendarCard.Day"/>
+        <TextView style="@style/CalendarCard.Day"/>
+        <TextView style="@style/CalendarCard.Day"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/card_grid"
+        android:layout_below="@id/card_days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/calendar_card_row"/>
+        <include layout="@layout/calendar_card_row"/>
+        <include layout="@layout/calendar_card_row"/>
+        <include layout="@layout/calendar_card_row"/>
+        <include layout="@layout/calendar_card_row"/>
+        <include layout="@layout/calendar_card_row"/>
+    </LinearLayout>
+
+</net.gongmingqm10.calendar.view.CalendarCard>
