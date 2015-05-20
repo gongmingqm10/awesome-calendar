@@ -5,12 +5,10 @@ import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import net.gongmingqm10.calendar.R;
 import net.gongmingqm10.calendar.util.DateUtil;
 import net.gongmingqm10.calendar.view.CalendarCard;
-import net.gongmingqm10.calendar.view.CalendarCell;
 
 import org.joda.time.LocalDate;
 import org.joda.time.Months;
