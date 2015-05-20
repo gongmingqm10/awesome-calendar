@@ -18,11 +18,19 @@ import org.joda.time.Months;
 import java.util.Calendar;
 
 public class CalendarPagerAdapter extends PagerAdapter {
-    private LocalDate startDate = DateUtil.getTodaysDate();
+    private LocalDate startDate;
     private Context context;
+    private View.OnClickListener listener;
 
-    public CalendarPagerAdapter(Context context) {
+    public CalendarPagerAdapter(Context context, LocalDate startDate, View.OnClickListener listener) {
         this.context = context;
+        this.startDate = startDate;
+        this.listener = listener;
+    }
+    
+    public void updateSelectionDate(LocalDate startDate) {
+        this.startDate = startDate;
+        notifyDataSetChanged();
     }
 
     @Override
@@ -47,7 +55,7 @@ public class CalendarPagerAdapter extends PagerAdapter {
 
         CalendarCard calendarView = (CalendarCard) LayoutInflater.from(context).inflate(R.layout.calendar_card_view, container, false);
         calendarView.populate(displayCalendar, startDate, null);
-        calendarView.setOnClickListener(calendarItemListener);
+        calendarView.setOnClickListener(listener);
 
         container.addView(calendarView);
         return calendarView;
@@ -57,16 +65,4 @@ public class CalendarPagerAdapter extends PagerAdapter {
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((CalendarCard) object);
     }
-
-    private View.OnClickListener calendarItemListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            CalendarCell calendarCell = (CalendarCell) view;
-            LocalDate selectedDate = (LocalDate) calendarCell.getTag();
-            startDate = selectedDate;
-
-            CalendarPagerAdapter.this.notifyDataSetChanged();
-            Toast.makeText(context, "Selected date: " + selectedDate.toString(), Toast.LENGTH_SHORT).show();
-        }
-    };
 }
