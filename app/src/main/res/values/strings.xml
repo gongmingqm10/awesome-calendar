@@ -6,6 +6,5 @@
     <string name="title_activity_horizontal_calendar">Horizontal Calendar</string>
     <string name="title_activity_vertical_calendar">Vertical Calendar</string>
     <string name="title_activity_depart_return">Start and End Date</string>
-    <string name="title_activity_google_calendar">Google Calendar</string>
     <string name="select_date">Select date</string>
 </resources>

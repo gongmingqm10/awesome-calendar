@@ -28,10 +28,6 @@
             android:name=".activity.StartEndDateActivity"
             android:label="@string/title_activity_depart_return"
             android:parentActivityName=".activity.MainActivity" />
-        <activity
-            android:name=".activity.GoogleCalendarActivity"
-            android:label="@string/title_activity_google_calendar"
-            android:parentActivityName=".activity.MainActivity" />
     </application>
 
 </manifest>
