@@ -9,6 +9,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,14 +20,17 @@
         <activity
             android:name=".activity.HorizontalCalendarActivity"
             android:label="@string/title_activity_horizontal_calendar"
+            android:screenOrientation="portrait"
             android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.VerticalCalendarActivity"
             android:label="@string/title_activity_vertical_calendar"
+            android:screenOrientation="portrait"
             android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.StartEndDateActivity"
             android:label="@string/title_activity_depart_return"
+            android:screenOrientation="portrait"
             android:parentActivityName=".activity.MainActivity" />
     </application>
 
