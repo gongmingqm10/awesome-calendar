@@ -7,6 +7,10 @@ the complicated logic.
 
 For those who wants to see the details, you can find the latest build in Google Play Store.
 
+<a href="https://play.google.com/store/apps/details?id=net.gongmingqm10.calendar" alt="Download from Google Play">
+  <img src="http://www.android.com/images/brand/android_app_on_play_large.png">
+</a>
+
 ## Different Calendars
 Below is the different type of the CalendarViews. One CalendarView can response your click event. Logic
 can be handled here. While the following different forms CalendarView is just use the CalendarView in the 
