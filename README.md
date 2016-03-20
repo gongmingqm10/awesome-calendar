@@ -1,9 +1,11 @@
 # awesome-calendar
 The awesome calendar for Android.
 
-This awesome calendar is designed to meet more complex business requirements for Android development. 
-And it's easy to make a custom perfect ui. This calender is more flexible to adapt different ui and 
-the complicated logic. 
+![Awesome Calendar](./calendar1.gif)
+
+This awesome calendar is designed to meet more complex business requirements for Android development.
+And it's easy to make a custom perfect ui. This calender is more flexible to adapt different ui and
+the complicated logic.
 
 For those who wants to see the details, you can find the latest build in Google Play Store.
 
@@ -13,16 +15,16 @@ For those who wants to see the details, you can find the latest build in Google 
 
 ## Different Calendars
 Below is the different type of the CalendarViews. One CalendarView can response your click event. Logic
-can be handled here. While the following different forms CalendarView is just use the CalendarView in the 
+can be handled here. While the following different forms CalendarView is just use the CalendarView in the
 container like ViewPager and ListView. Feel free to use it in any different containers. All you need to do
 is parse one display date for this CalendarView.
 
 ### Horizontal Calendar
-The horizontal calendar is build with ViewPager whose child item is one CalendarCard. Use can swipe it 
+The horizontal calendar is build with ViewPager whose child item is one CalendarCard. Use can swipe it
 horizontally. And then choose one date of it.
 
 ### Vertical Calendar
-The vertical calendar is build with ListView whose child item is CalendarCard with some information text. 
+The vertical calendar is build with ListView whose child item is CalendarCard with some information text.
 What you need to do is to `setAdapter` for the ListView.
 
 ### Start and Return Date
@@ -30,7 +32,7 @@ This is the most important part of the awesome calendar. User can select one sta
 All the logic can be adapted in the `onClickListener`. It's easy to understand and use if you see the code.
 
 ## Custom the UI
-If you have a better design for the calender, you'll find it's easy to change to another style. It's more 
+If you have a better design for the calender, you'll find it's easy to change to another style. It's more
 convenient than System Calendar ui kit.
 
 ## License
